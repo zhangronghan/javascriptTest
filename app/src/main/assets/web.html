@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<script type="text/javascript">
+    function javacalljs(){
+        document.getElementById("content").innerHTML="<br\>java调用无参函数";
+    }
+
+    function javacalljswith(args){
+        document.getElementById("content").innerHTML=args;
+    }
+
+
+</script>
+
+
+
+</head>
+
+
+<body>
+<h2 id="content">内容显示</h2>
+<input type="button" value="点击调用Java代码" onclick="window.android.startFunction()"/><br>
+
+<input type="button" value="点击调用Java代码并传递参数" onclick="window.android.startFunction('android and java')" /><br>
+
+<br><input type="button" value="打电话" onclick="window.android.call('10086')"/><br>
+
+<h3>发短信</h3>
+<form>
+<input type="text" name="message" size="15"/>
+<input type="button" value="发送" onclick="window.android.send('15625073647',this.form.message.value)"/>
+</form>
+</body>
+
+</html>
